@@ -80,7 +80,7 @@ export function Layout({ children, panel = true }: LayoutProps) {
             <img
               src={logo}
               alt="Ida & Stella's Nation Inc. logo"
-              className="h-12 w-12 object-contain drop-shadow-sm"
+              className="h-16 w-16 sm:h-20 sm:w-20 object-contain drop-shadow-sm"
             />
             <span className="flex flex-col leading-tight">
               <span className="font-serif text-lg font-semibold text-foreground">
@@ -180,7 +180,7 @@ export function Layout({ children, panel = true }: LayoutProps) {
               <img
                 src={logo}
                 alt="Ida & Stella's Nation Inc. logo"
-                className="h-10 w-10 object-contain"
+                className="h-16 w-16 object-contain"
               />
               <span className="font-serif text-base font-semibold">
                 Ida &amp; Stella's Nation

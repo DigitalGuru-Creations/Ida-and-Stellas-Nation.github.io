@@ -21,7 +21,7 @@ export default function Home() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
-              className="mb-5 h-24 w-24 sm:h-28 sm:w-28 object-contain drop-shadow-md"
+              className="mb-6 h-40 w-40 sm:h-48 sm:w-48 object-contain drop-shadow-md"
               data-testid="img-hero-logo"
             />
             <p className="text-[11px] uppercase tracking-[0.28em] text-primary font-semibold mb-4">

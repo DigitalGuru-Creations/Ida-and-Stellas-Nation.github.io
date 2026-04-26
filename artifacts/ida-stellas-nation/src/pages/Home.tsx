@@ -13,27 +13,29 @@ export default function Home() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
-            className="max-w-3xl rounded-3xl border border-white/40 bg-background/85 backdrop-blur-md shadow-2xl p-8 sm:p-12"
+            className="max-w-5xl rounded-3xl border border-white/40 bg-background/85 backdrop-blur-md shadow-2xl p-8 sm:p-12"
           >
-            <motion.img
-              src={logo}
-              alt="Ida & Stella's Nation Inc. logo"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
-              className="mb-6 h-40 w-40 sm:h-48 sm:w-48 object-contain drop-shadow-md"
-              data-testid="img-hero-logo"
-            />
             <p className="text-[11px] uppercase tracking-[0.28em] text-primary font-semibold mb-4">
               Non-Profit Organization &middot; Las Vegas, Nevada
             </p>
-            <h1
-              className="font-serif text-4xl sm:text-5xl lg:text-6xl font-semibold text-foreground leading-[1.05]"
-              data-testid="text-hero-title"
-            >
-              Ida &amp; Stella's Nation
-              <span className="block text-primary mt-2">Incorporated</span>
-            </h1>
+            <div className="flex flex-col md:flex-row md:items-center md:gap-8">
+              <h1
+                className="font-serif text-4xl sm:text-5xl lg:text-6xl font-semibold text-foreground leading-[1.05] flex-1"
+                data-testid="text-hero-title"
+              >
+                Ida &amp; Stella's Nation
+                <span className="block text-primary mt-2">Incorporated</span>
+              </h1>
+              <motion.img
+                src={logo}
+                alt="Ida & Stella's Nation Inc. logo"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
+                className="mt-6 md:mt-0 h-40 w-40 sm:h-48 sm:w-48 lg:h-56 lg:w-56 shrink-0 object-contain drop-shadow-md self-center md:self-auto"
+                data-testid="img-hero-logo"
+              />
+            </div>
             <p className="mt-6 text-lg sm:text-xl text-foreground/85 italic font-serif leading-relaxed">
               "Welcome to I.S.N, where there IS Love &amp; Restoration for our Nation."
             </p>

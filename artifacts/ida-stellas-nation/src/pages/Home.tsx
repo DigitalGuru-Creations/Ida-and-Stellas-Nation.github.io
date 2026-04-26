@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { ArrowRight, HeartHandshake, Users, Sparkles } from "lucide-react";
 import Layout from "@/components/Layout";
+import logo from "@/assets/logo.png";
 
 export default function Home() {
   return (
@@ -14,6 +15,15 @@ export default function Home() {
             transition={{ duration: 0.7, ease: "easeOut" }}
             className="max-w-3xl rounded-3xl border border-white/40 bg-background/85 backdrop-blur-md shadow-2xl p-8 sm:p-12"
           >
+            <motion.img
+              src={logo}
+              alt="Ida & Stella's Nation Inc. logo"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
+              className="mb-5 h-24 w-24 sm:h-28 sm:w-28 object-contain drop-shadow-md"
+              data-testid="img-hero-logo"
+            />
             <p className="text-[11px] uppercase tracking-[0.28em] text-primary font-semibold mb-4">
               Non-Profit Organization &middot; Las Vegas, Nevada
             </p>

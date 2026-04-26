@@ -2,10 +2,11 @@ import { ReactNode } from "react";
 import { Link, useLocation } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
-import { Menu, X, Heart } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import bgMeadow from "@/assets/bg-meadow.png";
 import bgForest from "@/assets/bg-forest.png";
 import bgLake from "@/assets/bg-lake.png";
+import logo from "@/assets/logo.png";
 
 const NAV = [
   { href: "/", label: "Home" },
@@ -76,9 +77,11 @@ export function Layout({ children, panel = true }: LayoutProps) {
             data-testid="link-home-logo"
             className="flex items-center gap-3 group"
           >
-            <span className="grid h-10 w-10 place-items-center rounded-full bg-primary text-primary-foreground shadow-md ring-1 ring-primary-border">
-              <Heart className="h-5 w-5" strokeWidth={2.25} />
-            </span>
+            <img
+              src={logo}
+              alt="Ida & Stella's Nation Inc. logo"
+              className="h-12 w-12 object-contain drop-shadow-sm"
+            />
             <span className="flex flex-col leading-tight">
               <span className="font-serif text-lg font-semibold text-foreground">
                 Ida &amp; Stella's Nation
@@ -173,10 +176,12 @@ export function Layout({ children, panel = true }: LayoutProps) {
       <footer className="relative z-10 mt-12 border-t border-white/20 bg-background/85 backdrop-blur-md">
         <div className="mx-auto max-w-7xl px-6 py-10 lg:px-10 grid gap-8 md:grid-cols-3">
           <div>
-            <div className="flex items-center gap-2">
-              <span className="grid h-8 w-8 place-items-center rounded-full bg-primary text-primary-foreground">
-                <Heart className="h-4 w-4" strokeWidth={2.25} />
-              </span>
+            <div className="flex items-center gap-3">
+              <img
+                src={logo}
+                alt="Ida & Stella's Nation Inc. logo"
+                className="h-10 w-10 object-contain"
+              />
               <span className="font-serif text-base font-semibold">
                 Ida &amp; Stella's Nation
               </span>

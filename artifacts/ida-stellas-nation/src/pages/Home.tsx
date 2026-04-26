@@ -32,7 +32,7 @@ export default function Home() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
-                className="mt-6 md:mt-0 h-40 w-40 sm:h-48 sm:w-48 lg:h-56 lg:w-56 shrink-0 object-contain drop-shadow-md self-center md:self-auto"
+                className="mt-6 md:mt-0 h-56 w-56 sm:h-64 sm:w-64 lg:h-72 lg:w-72 shrink-0 object-contain drop-shadow-md self-center md:self-auto"
                 data-testid="img-hero-logo"
               />
             </div>

@@ -1,0 +1,20 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "Nt3rLzWh10tdpOAS9wdcW"
+uri = "file://artifacts/ida-stellas-nation/src/assets/bg-forest.png"
+type = "image"
+title = "sunlit forest dawn"
+
+[[generated]]
+id = "ECnNh9BSEDhTD5r3nQM03"
+uri = "file://artifacts/ida-stellas-nation/src/assets/bg-lake.png"
+type = "image"
+title = "calm lake dawn"
+
+[[generated]]
+id = "wBf82mn6YJY9_fx2pTzVw"
+uri = "file://artifacts/ida-stellas-nation/src/assets/bg-meadow.png"
+type = "image"
+title = "gentle meadow sun"

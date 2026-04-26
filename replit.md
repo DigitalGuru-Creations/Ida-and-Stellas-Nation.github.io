@@ -25,3 +25,7 @@ pnpm workspace monorepo using TypeScript. Each package manages its own dependenc
 - `pnpm --filter @workspace/api-server run dev` — run API server locally
 
 See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and package details.
+
+## Artifacts
+
+- **`artifacts/ida-stellas-nation`** — Static React/Vite multi-page site for "Ida & Stella's Nation Incorporated", a Las Vegas non-profit. Mounted at `/`. Uses wouter for routing and framer-motion for animations. Five pages: Home, About, Services, History, Contact. Each page renders an opaque peaceful nature background (meadow / forest / lake) behind a translucent content panel. Palette: sage green primary, warm cream background, dusty rose accent. Serif: Cormorant Garamond. Background images live in `src/assets/`.

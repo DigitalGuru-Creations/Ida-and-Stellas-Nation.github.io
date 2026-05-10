@@ -1,5 +1,4 @@
 uploads = []
-outputs = []
 
 [[generated]]
 id = "Nt3rLzWh10tdpOAS9wdcW"
@@ -18,3 +17,9 @@ id = "wBf82mn6YJY9_fx2pTzVw"
 uri = "file://artifacts/ida-stellas-nation/src/assets/bg-meadow.png"
 type = "image"
 title = "gentle meadow sun"
+
+[[outputs]]
+id = "PAZTvcxPrqbm5_S1Z5FRg"
+uri = "file://Host_on_GitHub_Pages.md"
+type = "text"
+title = "Host on GitHub Pages"

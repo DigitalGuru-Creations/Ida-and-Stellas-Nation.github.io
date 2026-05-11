@@ -1,0 +1,45 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node.js 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build
+        run: pnpm --filter @workspace/ida-stellas-nation run build
+        env:
+          PORT: 3000
+          BASE_PATH: /Ida-and-Stellas-Nation.github.io/
+          NODE_ENV: production
+
+      - name: Copy index.html to 404.html (SPA routing fallback)
+        run: |
+          cp artifacts/ida-stellas-nation/dist/public/index.html \
+             artifacts/ida-stellas-nation/dist/public/404.html
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: artifacts/ida-stellas-nation/dist/public
